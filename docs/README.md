@@ -81,7 +81,7 @@ pub struct PublishRequest {
 
 > - **ApprovedNFT**
 
-```javascript
+```rust
 /*
 *   This struct holds the data of the approved tokens (for publishers), it has a holder_id, amount, owner and publisher account address, the 
 *   token_id, and the amount of commission. After approving a PublishRequest by a producer, it will be saved in a dictionary which maps every 
