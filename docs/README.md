@@ -10,6 +10,19 @@ This way, we only store a single token ID (which represents the product), and a 
 
 On droplinked, a publisher can send a publish request to the producer with a particular pre-defined commission amount. The producer can accept or reject requests and if a request is accepted, the publisher is then given the abilkity to publish the product to share with consumers and earn their entitled settlement portion.
 
+## Contract Instances
+
+- [Casper Network (CSPR)](https://github.com/FLATLAY/droplinked_casper)
+
+- [NEAR Protocol (NEAR)](https://github.com/FLATLAY/Droplinked-NEAR-Contract)
+
+- [Stacks (STX)](stacks.md)
+
+- [Polygon (MATIC)](polygon.md)
+
+- [Ripple (XRP)](https://github.com/FLATLAY/droplinked-ripple)
+
+- [Skale Network (SKL)](https://github.com/FLATLAY/droplinked_skale)
 
 ## Contract Objects (Entities) 
 
@@ -153,7 +166,7 @@ pub fn approve(request_id: u128) -> u128;
 
 We have two kinds of networks : one that has a pegged token (like USDT) and one that doesn't (like Casper). So based on the network, we have two different methods for buying tokens.
 
-> - **Buy (Pegged Token)**
+#### Buy (Pegged Token)
 
 ```rust
 /*
@@ -173,7 +186,7 @@ We have two kinds of networks : one that has a pegged token (like USDT) and one 
 pub fn buy(approved_id: u128, amount: u128) -> u128;
 ```
 
-> - **Buy (Non-Pegged Token)**
+#### Buy (Non-Pegged Token)
 
 ```rust
 /*
@@ -188,6 +201,3 @@ pub fn buy(approved_id: u128, amount: u128) -> u128;
 */
 pub fn buy(holder_id: u128, amount: u128, price: u128);
 ```
-
-[goto guide](guide.md)
-
