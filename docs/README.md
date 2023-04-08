@@ -1,4 +1,4 @@
-# Droplinked Contract
+# <u>Droplinked Contract Standard (DRC-42)</u>
 
 > Overview & Introduction
 
@@ -10,7 +10,7 @@ This way, we only store a single token ID (which represents the product), and a 
 
 On droplinked, a publisher can send a publish request to the producer with a particular pre-defined commission amount. The producer can accept or reject requests and if a request is accepted, the publisher is then given the abilkity to publish the product to share with consumers and earn their entitled settlement portion.
 
-## Contract Instances
+## <u>Contract Instances</u>
 
 - [Casper Network (CSPR)](https://github.com/FLATLAY/droplinked_casper)
 
@@ -24,7 +24,7 @@ On droplinked, a publisher can send a publish request to the producer with a par
 
 - [Skale Network (SKL)](https://github.com/FLATLAY/droplinked_skale)
 
-## Contract Objects (Entities) 
+## <u>Contract Objects (Entities) </u>
 
 > _**Here we explain each structure used within the contract and how they are used**_
 
@@ -34,6 +34,7 @@ _**Assuming we can use dictionaries, we use the following structures to store da
 
 _No dictionary? move [here](nodict.md)_
 
+_No Loop in Contract Language? read [noLoop](noloop.md) docs_
 > - **NFTHolder** 
 
 
@@ -99,9 +100,11 @@ pub struct ApprovedNFT {
 
 ---
 
-## Contract Methods
+## <u>Contract Methods</u>
 
-### Mint
+Here we explain each method used within the contract and how they are used. Note that these are signatures of the methods, and not the actual implementation. The actual implementation can be found in the contract files. Also note that methods are not limited to the ones listed here, and more methods can be added to the contract.
+
+### <u>Mint</u>
 
 ```rust
 /*
@@ -114,7 +117,7 @@ pub struct ApprovedNFT {
 pub fn mint(token_id: u128, name: String, uri: String, checksum: String, price: u128) -> u128;
 ```
 
-### Transfer
+### <u>Transfer</u>
 
 ```rust
 /*
@@ -135,7 +138,7 @@ pub fn transfer(holder_id: u128, amount: u128, receiver: Account) -> u128;
 ```
 
 
-### PublisRequest
+### <u>PublisRequest</u>
 
 ```rust
 /*
@@ -148,7 +151,7 @@ pub fn transfer(holder_id: u128, amount: u128, receiver: Account) -> u128;
 pub fn publish_request(producer : Account, holder_id: u128, amount: u128, commission: u128) -> u128;
 ```
 
-### Approve
+### <u>Approve</u>
 
 ```rust
 /*
@@ -162,11 +165,11 @@ pub fn publish_request(producer : Account, holder_id: u128, amount: u128, commis
 pub fn approve(request_id: u128) -> u128;
 ```
 
-### Buy
+### <u>Buy</u>
 
 We have two kinds of networks : one that has a pegged token (like USDT) and one that doesn't (like Casper). So based on the network, we have two different methods for buying tokens.
 
-#### Buy (Pegged Token)
+#### <u>Buy (Pegged Token)</u>
 
 ```rust
 /*
@@ -186,7 +189,7 @@ We have two kinds of networks : one that has a pegged token (like USDT) and one 
 pub fn buy(approved_id: u128, amount: u128) -> u128;
 ```
 
-#### Buy (Non-Pegged Token)
+#### <u>Buy (Non-Pegged Token)</u>
 
 ```rust
 /*
