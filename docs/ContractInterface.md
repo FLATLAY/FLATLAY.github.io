@@ -1,4 +1,7 @@
 <u>[Droplinked Documentations](README.md)</u> >> Contract Interface
+
+![Contract](Contract.png)
+
 # <u>Droplinked Contract Standard (DRC-42)</u>
 
 
@@ -25,6 +28,9 @@ On droplinked, a publisher can send a publish request to the producer with a par
 - [Ripple (XRP)](https://github.com/FLATLAY/droplinked-ripple)
 
 - [Skale Network (SKL)](https://github.com/FLATLAY/droplinked_skale)
+
+
+
 
 ## <u>Contract Objects (Entities) </u>
 
