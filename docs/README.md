@@ -12,8 +12,8 @@
 |    2    	|          [Payment System](PaymentSystem.md)         	| All payment types supported by Droplinked, and their process (Direct Pay, Pay for recorded Product and ...)  	|
 |    3    	|       [Decentralization](Decentralization.md)       	|                   The process of decentralizing droplinked's products (Record + Affiliate)                   	|
 |    4    	|        [Payment Contract](PaymentContract.md)       	|                    Droplinked's Smart Contract for Handling payments & Transferring tokens                   	|
-|    X    	|           [Terminology & Terms](Terms.md)           	|                                 Droplinked Ecosystem's Terminology & Glossary                                	|
-
+|    5    	|                [Q-Server](QServer.md)               	|                         Droplinked Queue Server documentation for it's implementation                        	|
+|    -1   	|           [Terminology & Terms](Terms.md)           	|                                 Droplinked Ecosystem's Terminology & Glossary                                	|
 
 ### • <u>Droplinked D-Commerce Stack</u>
 <img src="DroplinkedStack.png">
